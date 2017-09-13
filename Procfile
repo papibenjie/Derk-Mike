@@ -1,0 +1,1 @@
+web: gunicorn dofusteam.wsgi
