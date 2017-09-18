@@ -57,7 +57,7 @@ ROOT_URLCONF = 'dofusteam.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["sandbox/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
