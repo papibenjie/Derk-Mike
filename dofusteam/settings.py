@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
     os.path.join(BASE_DIR, 'assets'),
 ]
-print(os.path.join(BASE_DIR, 'assets'),)
+print(PROJECT_ROOT)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
