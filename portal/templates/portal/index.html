@@ -28,7 +28,7 @@
   (function() {
     var img_src = ""
     pokeId = Math.floor(Math.random() * 700) + 1
-    var pokeAPI = "http://pokeapi.co/api/v2/pokemon/"+pokeId;
+    var pokeAPI = "https://pokeapi.co/api/v2/pokemon/"+pokeId;
     $.getJSON( pokeAPI).done(function( data ) {
       sprites = data["sprites"]
       for (var key in sprites) {
