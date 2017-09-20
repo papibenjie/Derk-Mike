@@ -1,5 +1,5 @@
 """
-Django settings for dofusteam project on Heroku. For more info, see:
+Django settings for pokemon project on Heroku. For more info, see:
 https://github.com/heroku/heroku-django-template
 
 For more information on this file, see
@@ -53,12 +53,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dofusteam.urls'
+ROOT_URLCONF = 'pokemon.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["sandbox/templates"],
+        'DIRS': ["sandbox/templates", "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'dofusteam.wsgi.application'
+WSGI_APPLICATION = 'pokemon.wsgi.application'
 
 
 # Database
@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
     os.path.join(BASE_DIR, 'assets'),
 ]
-print(PROJECT_ROOT)
+
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

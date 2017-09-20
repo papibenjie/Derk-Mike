@@ -1,13 +1,14 @@
-{% load static %}
+{% extends "base/base.html" %}
+{% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'global/styles/css/allo.css' %}" />
+{% block title %}
+  sandbox
+{% endblock %}
 
-
-<body>
-  <input type="button" class="enjoy-css" value="Enjoy" />
+{% block content %}
 
   {% for i in list %}
-  Allo
-  {{ i }}
+    {{ i }}
   {% endfor %}
-</body>
+
+{% endblock %}

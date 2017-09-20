@@ -1,1 +1,1 @@
-web: gunicorn dofusteam.wsgi
+web: gunicorn pokemon.wsgi
