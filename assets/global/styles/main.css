@@ -1,3 +1,20 @@
 body {
-  font: 100%;
-  color: red; }
+  background-color: black; }
+
+.my-nav {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1); }
+  .my-nav li {
+    float: left; }
+    .my-nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; }
+      .my-nav li a:hover:not(.active) {
+        background-color: blue; }

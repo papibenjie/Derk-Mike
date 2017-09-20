@@ -16,6 +16,33 @@
     <div id="portal-title-container">
       <h1 id="portal-title">POKEMON</h1>
     </div>
+    <a id="poke-link" target="_blank" href="">
+      <img id="poke-thumbnail" src="" alt="Forest">
+    </a>
   </div>
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+  (function() {
+    var img_src = ""
+    pokeId = Math.floor(Math.random() * 700) + 1
+    var pokeAPI = "http://pokeapi.co/api/v2/pokemon/"+pokeId;
+    $.getJSON( pokeAPI).done(function( data ) {
+      sprites = data["sprites"]
+      for (var key in sprites) {
+        if (sprites.hasOwnProperty(key)) {
+          if(sprites[key] != null){
+            img_src = sprites[key]
+            $("#poke-thumbnail").attr("src",img_src);
+            $("#poke-link").attr("href", img_src)
+            break;
+          }
+        }
+      }
+    });
+  })();
+</script>
 
 {% endblock %}

@@ -2,5 +2,24 @@
 @import 'base/_mixins.sass'
 
 body
-  font: 100%
-  color: red
+  background-color: black
+
+
+.my-nav
+  width: 100%
+  list-style-type: none
+  margin: 0
+  padding: 0
+  overflow: hidden
+  background-color: $nav_background_color
+  li
+    float: left
+    a
+      display: block
+      color: $nav_text_color
+      text-align: center
+      padding: 14px 16px
+      text-decoration: none
+
+      &:hover:not(.active)
+        background-color: $nav_hover_color
