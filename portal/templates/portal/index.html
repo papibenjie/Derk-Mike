@@ -16,9 +16,10 @@
     <div id="portal-title-container">
       <h1 id="portal-title">POKEMON</h1>
     </div>
-    <a id="poke-link" target="_blank" href="{{ rand_poke_uri }}">
+    <figure id="poke-fig">
       <img id="poke-thumbnail" src="{{ rand_poke_uri }}">
-    </a>
+      <figcaption id="poke-thumbnail-label"> {{ rand_poke_name }} </figcaption>
+    </figure>
   </div>
 
 {% endblock %}

@@ -13,7 +13,9 @@ def index(request):
     json_data = json.loads(response.text)
     a = {k: v for k, v in json_data["sprites"].items() if v}
     pos, uri = random.choice(list(a.items()))
+
     context = {
-        "rand_poke_uri": uri
+        "rand_poke_uri": uri,
+        "rand_poke_name": json_data["name"],
     }
     return HttpResponse(template.render(context, request))

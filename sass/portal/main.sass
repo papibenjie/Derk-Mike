@@ -8,16 +8,17 @@
 	position: absolute
 
 #portal-title
-  @include centerer
-  font-family: $title_font_family
+	@include centerer()
+	font-family: $title_font_family
 
 #portal-title-container
   position: relative
   height: 30%
 
-img
-	@include centerer
-	padding: 5px; /* Some padding */
-	width: 150px; /* Set a small width */
-	&:hover
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+#poke-fig
+	@include centerer()
+	margin-right: 100px
+	img
+		padding-right: 75px
+	figcaption
+		padding-right: 7px
