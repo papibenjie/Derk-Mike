@@ -1,21 +1,17 @@
+from django.contrib.staticfiles.storage import staticfiles_storage
 from django.http import HttpResponse
 from django.template import loader
+import random
 import requests
 import json
 import random
-
+import os
 
 def index(request):
+
     template = loader.get_template('portal/index.html')
-
-    uri = "https://pokeapi.co/api/v2/pokemon/"+str(random.randint(1,700))
-    response = requests.get(uri)
-    json_data = json.loads(response.text)
-    a = {k: v for k, v in json_data["sprites"].items() if v}
-    pos, uri = random.choice(list(a.items()))
-
+    url = 'global/images/mike_faces/mike-face-'+str(random.randint(1,7))+'.png'
     context = {
-        "rand_poke_uri": uri,
-        "rand_poke_name": json_data["name"],
+        "rand_mike":url
     }
     return HttpResponse(template.render(context, request))

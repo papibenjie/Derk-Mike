@@ -1,5 +1,5 @@
 """
-Django settings for pokemon project on Heroku. For more info, see:
+Django settings for derkmike project on Heroku. For more info, see:
 https://github.com/heroku/heroku-django-template
 
 For more information on this file, see
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'pokemon.urls'
+ROOT_URLCONF = 'derkmike.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pokemon.wsgi.application'
+WSGI_APPLICATION = 'derkmike.wsgi.application'
 
 
 # Database

@@ -21,8 +21,13 @@
   position: relative;
   height: 30%; }
 
-#mike-img {
+#poke-fig {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  margin-right: 100px; }
+  #poke-fig img {
+    padding-right: 75px; }
+  #poke-fig figcaption {
+    padding-right: 7px; }

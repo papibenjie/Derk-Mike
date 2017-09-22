@@ -11,15 +11,12 @@
 {% endblock %}
 
 {% block content %}
-
+  {{ rand_mike }}
   <div id="portal-background">
     <div id="portal-title-container">
-      <h1 id="portal-title">POKEMON</h1>
+      <h1 id="portal-title">MIKE! MIKE!</h1>
     </div>
-    <figure id="poke-fig">
-      <img id="poke-thumbnail" src="{{ rand_poke_uri }}">
-      <figcaption id="poke-thumbnail-label"> {{ rand_poke_name }} </figcaption>
-    </figure>
+      <img id="mike-img" src="{% static rand_mike %}" height="100" width="100">
   </div>
 
 {% endblock %}
