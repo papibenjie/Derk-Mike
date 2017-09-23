@@ -1,15 +1,18 @@
 {% load staticfiles %}
+{% load assign %}
 
 <!DOCTYPE html>
 <html>
   <head>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link href="{% static 'global/styles/main.css' %}" rel="stylesheet" type="text/css">
       {% block link %}{% endblock %}
       <title>{% block title %}{% endblock %}</title>
   </head>
+  <link href="{% static 'global/styles/main.css' %}" rel="stylesheet" type="text/css">
   <body class="{% block bodyclass %}{% endblock %}">
-    {% include "base/navbar.html" %}
+    {% if not hide_nav %}
+      {% include "base/navbar.html" %}
+    {% endif %}
     {% block content %}{% endblock %}
   </body>
   {% block script %}{% endblock %}
