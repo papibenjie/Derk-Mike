@@ -23,7 +23,9 @@ def do_assign(parser, token):
     """
     bits = token.contents.split()
     if len(bits) != 3:
-        raise template.TemplateSyntaxError("'%s' tag takes two arguments" % bits[0])
+        raise template.TemplateSyntaxError(
+            "{0} tag takes two arguments".format(bits[0]))
+
     value = parser.compile_filter(bits[2])
     return AssignNode(bits[1], value)
 
