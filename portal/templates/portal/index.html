@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% load staticfiles %}
+{% load assign %}
 
 {% block title %}portal{% endblock %}
 
@@ -9,12 +10,19 @@
 {% endblock %}
 
 {% block content %}
-  <div id="portal-background">
-    <div id="portal-title-container">
-      <h1 id="portal-title">MIKE! MIKE!</h1>
-    </div>
+
+    <div id="portal-container">
+      <div id="portal-title-container">
+        <h1 id="portal-title">MIKE! MIKE!</h1>
+      </div>
       <img id="mike-img" src="{% static rand_mike %}" height="100" width="100">
-  </div>
+      <ul id="portal-nav">
+        <li><a href="#">Ce mike</a></li>
+        <li><a href="#">Parlons-en</a></li>
+        <li><a href="#">Que dire</a></li>
+      </ul>
+    </div>
+
 
 {% endblock %}
 

@@ -4,15 +4,34 @@
 body
 	@include radial-gradient($background_start, $background_end)
 
+#portal-container
+	min-height: 300px
+	@include center()
+	text-align: center
 
 #portal-title
 	font-family: $title_font_family
 
 #portal-title-container
-	text-align: center
   position: relative
   height: 100%
 
 #mike-img
+	margin-bottom: 50px
+	margin-top: 50px
 	border-radius: 50%
-	@include center()
+
+#portal-nav
+	border: 1px solid #ccc
+	border-width: 1px 0
+	list-style: none
+	margin: 0
+	padding: 0
+	text-align: center
+
+	li
+		display: inline
+		a
+
+			display: inline-block
+			padding: 10px
