@@ -5,20 +5,26 @@ body
 	@include radial-gradient($background_start, $background_end)
 
 .my-nav
-  width: 100%
-  list-style-type: none
-  margin: 0
-  padding: 0
-  overflow: hidden
-  background-color: $nav_background_color
-  li
-    float: left
-    a
-      display: block
-      color: $nav_text_color
-      text-align: center
-      padding: 14px 16px
-      text-decoration: none
+	width: 100%
+	list-style-type: none
+	margin: 0
+	padding: 0
+	overflow: hidden
+	background: linear-gradient(-35deg, $nav_background_color_1 0%, $nav_background_color_1 25%, $nav_background_color_2 40%, $nav_background_color_3 75%, $nav_background_color_3 100%)
+	background-size: 400%
+	background-position: 0 100%
+	li
+	  float: left
+	  a
+	    display: block
+	    color: $nav_text_color
+	    text-align: center
+	    padding: 14px 16px
+	    text-decoration: none
 
-      &:hover:not(.active)
-        background-color: $nav_hover_color
+	    &:hover:not(.active)
+	      background-color: $nav_hover_color
+
+	&:hover
+		background-position: 100% 0
+		transition: all 600ms

@@ -12,7 +12,9 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.1); }
+  background: linear-gradient(-35deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 25%, rgba(255, 170, 200, 0.1) 40%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%);
+  background-size: 400%;
+  background-position: 0 100%; }
   .my-nav li {
     float: left; }
     .my-nav li a {
@@ -22,4 +24,7 @@ body {
       padding: 14px 16px;
       text-decoration: none; }
       .my-nav li a:hover:not(.active) {
-        background-color: blue; }
+        background-color: rgba(255, 170, 200, 0.1); }
+  .my-nav:hover {
+    background-position: 100% 0;
+    transition: all 600ms; }
