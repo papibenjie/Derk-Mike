@@ -6,12 +6,14 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       {% block link %}{% endblock %}
       <title>{% block title %}{% endblock %}</title>
+      <link href="{% static 'global/styles/main.css' %}" rel="stylesheet" type="text/css">
   </head>
-  <link href="{% static 'global/styles/main.css' %}" rel="stylesheet" type="text/css">
   <body class="{% block bodyclass %}{% endblock %}">
-    {% if not hide_nav %}
-      {% include "base/navbar.html" %}
-    {% endif %}
+      {% if not hide_nav %}
+        </header>
+          {% include "base/navbar.html" %}
+        <header>
+      {% endif %}
     {% block content %}{% endblock %}
   </body>
   {% block script %}{% endblock %}

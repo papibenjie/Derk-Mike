@@ -1,0 +1,35 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load assign %}
+
+{% block title %}that Mike{% endblock %}
+
+{% block link %}
+  <link href="{% static 'body/css/main.css' %}" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+  {% for key, value in urls.items %}
+      <div class="item">
+        <img class="box" src="{% static key %}" alt="">
+        <span class="caption">{{ value }}</span>
+      </div>
+  {% endfor%}
+  {{caps}}
+</div>
+
+
+
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+
+</script>
+
+{% endblock %}

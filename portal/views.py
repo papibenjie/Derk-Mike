@@ -10,7 +10,7 @@ def index(request):
         '.png'
 
     context = {
-        "hide_nav": True,
+        "hide_nav": False,
         "rand_mike": url,
     }
     return HttpResponse(template.render(context, request))

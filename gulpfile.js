@@ -24,6 +24,13 @@ gulp.task('styles_sandbox', function() {
         .pipe(gulp.dest('sandbox/static/sandbox/css'));
 });
 
+gulp.task('styles_body', function() {
+    gulp.src('sass/body/main.sass')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('body/static/body/css'));
+});
+
+
 gulp.task('style_watch', function () {
-   gulp.watch(['sass/**/*.sass', 'sass/**/base/*.sass'], ['styles_sandbox', 'styles_portal', 'styles_global']);
+   gulp.watch(['sass/**/*.sass'], ['styles_sandbox', 'styles_portal', 'styles_global', 'styles_body']);
 });

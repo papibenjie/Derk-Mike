@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^sandbox/', include('sandbox.urls')),
     url(r'^', include('portal.urls')),
+    url(r'^that_mike/', include('body.urls')),
 ]
