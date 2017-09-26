@@ -6,12 +6,10 @@
 
 {% block link %}
   <link href="{% static 'body/css/main.css' %}" rel="stylesheet" type="text/css">
-  <script src="{% static 'global/tags/body_frame.tag' %}" type="riot/tag"></script>
+  <script src="{% static 'body/tags/body_frame.tag' %}" type="riot/tag"></script>
 {% endblock %}
 
 {% block content %}
-
-<hello-world></hello-world>
 
 <div class="wrapper">
   {% for key, value in urls.items %}
