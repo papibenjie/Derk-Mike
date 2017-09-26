@@ -6,22 +6,18 @@
 
 {% block link %}
   <link href="{% static 'body/css/main.css' %}" rel="stylesheet" type="text/css">
-
+  <script src="{% static 'global/tags/body_frame.tag' %}" type="riot/tag"></script>
 {% endblock %}
 
 {% block content %}
+
+<hello-world></hello-world>
+
 <div class="wrapper">
   {% for key, value in urls.items %}
-      <div class="item">
-        <img class="box" src="{% static key %}" alt="">
-        <span class="caption">{{ value }}</span>
-      </div>
+      <body-frame src="{% static key %}">{{ value }}</body-frame>
   {% endfor%}
   {{caps}}
-</div>
-
-
-
 </div>
 
 
@@ -29,7 +25,7 @@
 
 {% block script %}
 <script type="text/javascript">
-
+  riot.mount("*")
 </script>
 
 {% endblock %}

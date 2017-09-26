@@ -3,12 +3,26 @@ from django.template import loader
 import os
 import random as rdm
 
+
 def index(request):
 
     mypath = 'body/static/body/images'
-    captions = ["wow", "quel homme", "que dire ?", "magnifique !", "miam", "so swag", "balancoire", "Mike! Mike!"]
+    captions = [
+        "wow",
+        "quel homme",
+        "que dire ?",
+        "magnifique !",
+        "miam",
+        "so swag",
+        "balancoire",
+        "Mike! Mike!",
+        "Im wet",
+        "wouf"
+    ]
 
-    onlyfiles = ["body/images/" + f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+    onlyfiles = ["body/images/" + f for f in os.listdir(mypath)
+                 if os.path.isfile(os.path.join(mypath, f))]
+
     rdm.shuffle(onlyfiles)
 
     captions = [rdm.choice(captions) for i in onlyfiles]
