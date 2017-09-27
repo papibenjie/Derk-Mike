@@ -6,31 +6,19 @@
 
 {% block link %}
   <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
-  <link href="{% static 'portal/css/main.css' %}" rel="stylesheet" type="text/css">
+  <script src="{% static 'portal/tags/portal.tag' %}" type="riot/tag"></script>
 {% endblock %}
 
 {% block content %}
 
 
-
-    <div id="portal-container">
-      <div id="portal-title-container">
-        <h1 id="portal-title">MIKE! MIKE!</h1>
-      </div>
-      <img id="mike-img" src="{% static rand_mike %}" height="100" width="100">
-      <ul id="portal-nav">
-        <li><a href="/that_mike">Ce mike</a></li>
-        <li><a href="#">Parlons-en</a></li>
-        <li><a href="#">Que dire</a></li>
-      </ul>
-    </div>
+<portal src={% static rand_mike %}></portal>
 
 {% endblock %}
 
 {% block script %}
 <script type="text/javascript">
-
-
+  riot.mount("*")
 </script>
 
 {% endblock %}

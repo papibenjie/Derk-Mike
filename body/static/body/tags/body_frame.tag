@@ -13,11 +13,16 @@
   div {
     width: 120px; }
 
+  div:hover > img {
+    background-color: lightpink; }
+
+  div:hover > span {
+    color: red; }
+
   img {
     width: 100px;
     height: 100px;
     background-color: grey;
-    background-color: #444;
     color: #fff;
     border-radius: 5px;
     padding: 0.5em;
