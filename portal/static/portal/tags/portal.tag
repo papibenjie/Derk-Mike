@@ -2,14 +2,10 @@
 
   <div id="portal-container">
     <div id="portal-title-container">
-      <h1 id="portal-title">MIKE! MIKE!</h1>
+      <h1>MIKE! MIKE!</h1>
     </div>
     <img id="mike-img" src="{this.opts.src}" height="100" width="100">
-    <ul id="portal-nav">
-      <li><a href="/that_mike">Ce mike</a></li>
-      <li><a href="#">Parlons-en</a></li>
-      <li><a href="#">Que dire</a></li>
-    </ul>
+    <portal-nav></portal-nav>
   </div>
 
   <script>
@@ -25,12 +21,10 @@
     transform: translate(-50%, -50%);
     text-align: center; }
 
-  #portal-title {
-    font-family: "Cinzel Decorative"; }
-
   #portal-title-container {
     position: relative;
-    height: 100%; }
+    height: 100%;
+  font-family: "Cinzel Decorative"; }
 
   #mike-img {
     margin-bottom: 50px;
@@ -44,6 +38,17 @@
      border-color: blue;
     }
 
+  </style>
+</portal>
+
+<portal-nav>
+  <ul id="portal-nav">
+    <li><a href="/that_mike">Ce mike</a></li>
+    <li><a href="#">Parlons-en</a></li>
+    <li><a href="#">Que dire</a></li>
+  </ul>
+
+  <style>
   #portal-nav {
     border: 1px solid #ccc;
     border-width: 1px 0;
@@ -53,9 +58,13 @@
     text-align: center; }
     #portal-nav li {
       display: inline; }
+      #portal-nav li a:hover {
+        background-color: lightpink;
+        opacity: 0.5;}
       #portal-nav li a {
         display: inline-block;
         padding: 10px; }
 
   </style>
-</portal>
+
+</portal-nav>
